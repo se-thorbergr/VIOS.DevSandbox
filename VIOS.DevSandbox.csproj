@@ -19,8 +19,18 @@
     <PackageReference Include="Mal.Mdk2.References" Version="2.2.4" />
   </ItemGroup>
 
+  <!--
   <ItemGroup>
+    <ProjectReference Include="..\..\Mixins\Modules\Power\PowerModule.csproj" />
     <ProjectReference Include="..\..\Mixins\VIOS.Core\VIOS.Core.csproj" />
+    <ProjectReference Include="..\..\Mixins\Modules\ScreenMgr\ScreenManagerModule.csproj" />
+  </ItemGroup>
+  -->
+
+  <ItemGroup>
+    <Compile Include="../../Mixins/Modules/ScreenMgr/**/*.cs">
+      <Link>Mixins/Modules/ScreenMgr/%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
