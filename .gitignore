@@ -3,10 +3,14 @@ bin/
 obj/
 # VSCode
 .vscode/
+# Visual Studio
+.vs/
 # Rider
 .idea/
 # MDK²
 mdk/
+# MDK² local settings (do not commit)
+*.mdk.local.ini
 
 # OS/editor noise
 .DS_Store
@@ -18,3 +22,4 @@ ehthumbs.db
 *.tmp
 ~$*
 *~
+*.backup-*

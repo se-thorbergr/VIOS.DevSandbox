@@ -3,8 +3,12 @@
     <!-- MDK² role: Programmable Block script -->
     <Mdk2ProjectType>mdk2pbscript</Mdk2ProjectType>
 
-    <!-- All standard knobs (TargetFramework, LangVersion, RootNamespace, etc.)
-         are inherited from the repo's Directory.Build.props -->
+    <!-- All standard knobs (TargetFramework, LangVersion, RootNamespace, etc.) -->
+    <LangVersion>6</LangVersion>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>IngameScript</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,18 +24,10 @@
   </ItemGroup>
 
   <!--
-  <ItemGroup>
-    <ProjectReference Include="..\..\Mixins\Modules\Power\PowerModule.csproj" />
-    <ProjectReference Include="..\..\Mixins\VIOS.Core\VIOS.Core.csproj" />
-    <ProjectReference Include="..\..\Mixins\Modules\ScreenMgr\ScreenManagerModule.csproj" />
-  </ItemGroup>
+  <Import Project="../../Mixins/VIOS.Core/VIOS.Core.projitems" Label="Shared" />
+  <Import Project="../../Mixins/Modules/Power/Power.projitems" Label="Shared" />
+  <Import Project="../../Mixins/Modules/ScreenMgr/ScreenMgr.projitems" Label="Shared" />
   -->
-
-  <ItemGroup>
-    <Compile Include="../../Mixins/Modules/ScreenMgr/**/*.cs">
-      <Link>Mixins/Modules/ScreenMgr/%(RecursiveDir)%(Filename)%(Extension)</Link>
-    </Compile>
-  </ItemGroup>
 
   <ItemGroup>
     <None Remove="Instructions.readme" />
